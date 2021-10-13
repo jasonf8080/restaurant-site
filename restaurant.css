@@ -55,6 +55,9 @@
   /*header*/
   .header{
       position: relative;
+      background: url("https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center/cover fixed;
+      min-height: calc(100vh - 76px);
+      max-height: calc(100vh - 76px);
   }
 
   .header::after{
@@ -200,6 +203,7 @@
     grid-template-columns: 1fr 1fr;
     max-width: 75%;
     column-gap: 20px;
+    row-gap: 30px;
     justify-content: center;
     margin: 0 auto;
     margin-top: 2rem;
@@ -345,7 +349,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
@@ -369,6 +373,7 @@
   height: auto;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  display: block;
 
 }
 
@@ -379,7 +384,7 @@
   border-radius: 3px;
   text-align: center;
   font-weight: bold;
- border: 1px dashed white;
+ box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 0.5);
  cursor: pointer;
  transition: 0.3s;
 }
@@ -389,7 +394,7 @@
 .menu-item a{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 20px 0;
   background: black;
@@ -400,39 +405,252 @@
   
 }
 
-.menu-item a::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0px;
-  background: white;
-  transition: 0.6s;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
+
 
 .menu-item a p{
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.menu-item a i{
-  font-size: 1.4rem;
-}
 
-.menu-item:hover.menu-item a p, .menu-item:hover.menu-item a i{
-  color: black;
-  z-index: 99;
+
+.menu-item:hover{
+  transform: scale(1.03);
 }
 
 
-.menu-item:hover.menu-item a::after{
-  width: 100%;
+/*about-info*/
+
+.about-info-grid{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  max-width: 75%;
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.about-info-grid img{
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
+.content-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+}
+
+
+
+
+.address{
+  border: 3px solid rgb(44, 37, 33);
+  padding: 5% 10%;
+}
+
+.hours-repeat span{
+  margin-left: 5px;
+}
+
+.about-information-p{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.about-btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-btn:first-of-type{
+  margin-right: 12px;
+}
+
+.about-btn i{
+  margin-right: 5px;
+  background: black;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+/*Media Feed*/
+
+.media-feed h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.media-feed-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 75%;
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+   
+}
+
+.media-feed-grid img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.329);
+}
+
+/*footer*/
+
+.footer{
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://media-cdn.tripadvisor.com/media/photo-s/1a/b8/46/6d/london-stock.jpg") no-repeat center/cover;
+  padding: 5% 0;
+  margin-bottom: 0;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 347px);
+  max-width: 90%;
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  
+}
+
+.footer-grid *{
+  color: white;
+  text-transform: uppercase;
+}
+
+.footer-item{
+  min-width: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 347px;
+}
+
+.footer-item h2{ 
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list-header{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.visit-list{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.visit-list i{
+  margin-right: 8px;
+}
+
+.icon-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-list i{
+  margin-right: 5px;
+  font-size: 1.3rem;
+  border: 1px solid white;
+  padding: 14px;
+  border-radius: 50%;
+}
+
+.menu-list{
+  width: 70%;
+}
+
+.menu-list li{
+  border: 2px dashed white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  transition: 0.4s;
+}
+
+.menu-list li:hover{
+  background: white;
+}
+
+
+
+.day-times{
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.day-times h4{
+  margin-right: 8px;
+}
+@media(max-width: 1024px){
+  
+
+  .content-section p{
+    font-size: 10px;
+  }
+
+  .hours-content h2{
+    font-size: 2rem;
+  }
+  
+  .hours-content p{
+    font-size: 0.75rem;
+  }
+
+  .hours-content .btn{
+    font-size: 0.75rem;
+    max-width: 100%;
+    justify-content: center;
+  }
 }
 
 @media(max-width: 768px){
+  .hours-pictures{
+    grid-template-columns: 1fr;
+    max-width: 65%;
+  }
+
+  .hours-content h2{
+    font-size: 3rem;
+  }
+  
+  .hours-content p{
+    font-size: 1rem;
+  }
+
+  .hours-content a{
+    font-size: 1rem;
+  }
+
   .menu-grid{
     grid-template-columns: 1fr;
     max-width: 65%;
@@ -441,5 +659,28 @@
   .featured-grid{
     grid-template-columns: 1fr;
     max-width: 65%;
+  }
+
+  .about-info-grid{
+    grid-template-columns: 1fr;
+    max-width: 75;
+  }
+
+  .media-feed-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 590px){
+  .hours-content h2{
+    font-size: 2rem;
+  }
+  
+  .hours-content p{
+    font-size: 0.75rem;
+  }
+
+  .hours-content a{
+    font-size: 0.75rem;
   }
 }
