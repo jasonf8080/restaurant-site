@@ -349,6 +349,7 @@
 
 /*menu*/
 .menu-section{
+  font-size: 16px;
   position: relative;
   padding: 10% 0;
   background: url("https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center/cover;
@@ -370,7 +371,7 @@
 .menu-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
+  column-gap: 1.25em;
   row-gap: 30px;
   justify-content: center;
   margin: 0 auto;
@@ -408,7 +409,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 1.25em 0;
   background: black;
   color: white;
   border-bottom-right-radius: 3px;
@@ -420,7 +421,7 @@
 
 
 .menu-item a p{
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -652,6 +653,10 @@
     font-size: 14px;
   }
 
+  .menu-section{
+    font-size: 13px;
+  }
+
   .hours{
     font-size: 13px;
   }
@@ -701,11 +706,12 @@
     max-width: 80%;
   }
 
-
+  .menu-section{
+    font-size: 11px;
+  }
 
   .menu-grid{
-    grid-template-columns: 1fr;
-    max-width: 60%;
+    max-width: 85%;
   }
 
   .featured-grid{
@@ -751,6 +757,10 @@
 
   .hours{
     font-size: 11px;
+  }
+
+  .menu-section{
+    font-size: 8px;
   }
 
   .about-information{
