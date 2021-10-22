@@ -55,7 +55,7 @@
   /*header*/
   .header{
       position: relative;
-      background: url("https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center/cover fixed;
+      background: url("restaurantbg.jpg") no-repeat center/cover fixed;
       min-height: calc(100vh - 76px);
       max-height: calc(100vh - 76px);
       font-size: 16px;
@@ -698,7 +698,7 @@
 
   .hours-pictures{
     grid-template-columns: 1fr;
-    max-width: 60%;
+    max-width: 80%;
   }
 
 
@@ -746,7 +746,7 @@
 @media(max-width: 590px){
 
   .header{
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .hours{
